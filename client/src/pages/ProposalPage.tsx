@@ -4,12 +4,20 @@ import hearts from "../assets/hearts.svg";
 
 export default function ProposalPage() {
   const [, setLocation] = useLocation();
-  const [noButtonStyle, setNoButtonStyle] = useState({ top: '0px', left: '0px' });
+  const [noButtonStyle, setNoButtonStyle] = useState({ 
+    top: '50%', 
+    left: '50%', 
+    transform: 'translate(60px, -50%)' // This will position it slightly to the right of the Yes button
+  });
 
   const moveButton = () => {
     const x = Math.random() * (window.innerWidth - 100);
     const y = Math.random() * (window.innerHeight - 40);
-    setNoButtonStyle({ top: `${y}px`, left: `${x}px` });
+    setNoButtonStyle({ 
+      top: `${y}px`, 
+      left: `${x}px`,
+      transform: 'none'
+    });
   };
 
   return (
