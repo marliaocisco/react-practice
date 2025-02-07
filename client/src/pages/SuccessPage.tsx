@@ -1,79 +1,41 @@
-import { useEffect, useState } from "react";
 import Confetti from "react-confetti";
-import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart } from "lucide-react";
+import valentineImage from "../assets/valentine.svg";
 
 export default function SuccessPage() {
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
-    <div className="min-h-screen bg-pink-50 flex items-center justify-center p-4">
-      <Confetti
-        width={windowSize.width}
-        height={windowSize.height}
-        colors={["#EC4899", "#FB7185", "#FDA4AF", "#FCE7F3"]}
-        numberOfPieces={150}
+    <div style={{ 
+      height: '100vh',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: '#ffecf2',
+      fontFamily: 'Arial, sans-serif',
+      textAlign: 'center',
+      padding: '20px'
+    }}>
+      <Confetti 
+        colors={['#ff4d8d', '#ff80ab', '#ff99bb', '#ffb3cc']}
+        numberOfPieces={200}
       />
 
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", duration: 0.5 }}
-      >
-        <Card className="w-full max-w-md bg-white/90 backdrop-blur">
-          <CardContent className="pt-6 text-center">
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-              className="mb-6"
-            >
-              <Heart className="w-16 h-16 text-pink-500 mx-auto" />
-            </motion.div>
+      <h1 style={{ color: '#ff4d8d', fontSize: '2.5em', marginBottom: '20px' }}>
+        Yay! Thank you! 🎉
+      </h1>
 
-            <h1 className="text-3xl font-bold text-pink-600 mb-4">
-              Yay! 🎉
-            </h1>
+      <p style={{ fontSize: '1.5em', marginBottom: '30px' }}>
+        You make my heart skip a beat! 💝
+      </p>
 
-            <div className="space-y-4 text-gray-700">
-              <p className="text-xl">
-                Thank you for being my Valentine! ❤️
-              </p>
-              <p className="text-lg">
-                You make my heart skip a beat! 💝
-              </p>
-            </div>
-
-            <div className="mt-6">
-              <img
-                src="https://images.unsplash.com/photo-1517867065801-e20f409696b0"
-                alt="Valentine's Day Hearts"
-                className="rounded-lg shadow-lg mx-auto max-w-xs"
-              />
-            </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+      <img 
+        src={valentineImage} 
+        alt="Valentine's Day" 
+        style={{ 
+          width: '300px',
+          borderRadius: '10px',
+          boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+        }} 
+      />
     </div>
   );
 }

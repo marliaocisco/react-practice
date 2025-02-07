@@ -1,0 +1,6 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#ffecf2"/>
+  <path d="M150 250C150 250 50 175 50 100C50 60 75 35 110 35C125 35 140 50 150 60C160 50 175 35 190 35C225 35 250 60 250 100C250 175 150 250 150 250Z" 
+        fill="#ff4d8d"/>
+  <text x="150" y="170" text-anchor="middle" fill="#fff" font-size="24">💖</text>
+</svg>
