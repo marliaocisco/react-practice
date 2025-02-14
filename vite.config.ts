@@ -9,6 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export default defineConfig({
+  base: '/react-practice/', // Replace <REPO> with your actual repository name
   plugins: [react(), runtimeErrorOverlay(), themePlugin()],
   resolve: {
     alias: {
