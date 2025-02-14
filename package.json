@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "start": "vite preview",
-    "check": "tsc"
+    "check": "tsc",
+    "preview": "vite preview --port 8080"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
