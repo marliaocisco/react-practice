@@ -1,5 +1,6 @@
 import Confetti from "react-confetti";
-import valentineImage from "../assets/valentine.svg";
+// import valentineImage from "../assets/valentine.svg";
+import us from "../assets/us.jpg";
 
 export default function SuccessPage() {
   return (
@@ -28,7 +29,7 @@ export default function SuccessPage() {
       </p>
 
       <img 
-        src={valentineImage} 
+        src={us} 
         alt="Valentine's Day" 
         style={{ 
           width: '300px',

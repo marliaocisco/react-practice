@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
-import hearts from "../assets/hearts.svg";
+// import hearts from "../assets/hearts.svg";
+import hearts from "../assets/silly.jpg"
 
 export default function ProposalPage() {
   const [, setLocation] = useLocation();
@@ -32,7 +33,7 @@ export default function ProposalPage() {
       textAlign: 'center',
       padding: '20px'
     }}>
-      <img src={hearts} alt="Hearts" style={{ width: '100px', marginBottom: '20px' }} />
+      <img src={hearts} alt="Hearts" style={{ width: '500px', marginBottom: '20px' }} />
       <h1 style={{ color: '#ff4d8d', fontSize: '2.5em', marginBottom: '20px' }}>
         Hey Rebekie! 💖
       </h1>
